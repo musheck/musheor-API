@@ -1,5 +1,13 @@
 {
   "name": "musheor-uuid-api",
   "main": "src/index.js",
-  "compatibility_date": "2026-02-19"
+  "compatibility_date": "2026-02-19",
+
+  // Both domains point to the same worker.
+  // Route "/" on mutuals.musheck.dev → uuids.json
+  // Route "/highways" on highways.musheck.dev → highways.json
+  "routes": [
+    { "pattern": "mutuals.musheck.dev/*",  "zone_name": "musheck.dev" },
+    { "pattern": "highways.musheck.dev/*", "zone_name": "musheck.dev" }
+  ]
 }
